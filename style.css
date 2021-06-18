@@ -1,0 +1,13 @@
+/* - Mobile: 375px
+- Desktop: 1440px */
+
+:root {
+  --dark-gray: rgb(161, 161, 161);
+  --black: rgb(0, 0, 0);
+  --white: rgb(255, 255, 255);
+  --very-dark-gray: rgb(69, 69, 69);
+}
+
+body {
+  font-family: 'Spartan', sans-serif;
+}

@@ -71,6 +71,24 @@ header {
 
 .menu-link {
   cursor: pointer;
+  position: relative;
+}
+
+.menu-link::after {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  left: 50%;
+  transform: scale(0);
+  width: 90%;
+  height: 0.1rem;
+  background: var(--white);
+  transition: 0.4s ease-in;
+}
+
+.menu-link:hover::after {
+  transform: scale(1) translateX(-50%);
+  transform-origin: center;
 }
 
 .menu-link:not(:last-of-type) {

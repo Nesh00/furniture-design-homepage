@@ -10,4 +10,253 @@
 
 body {
   font-family: 'Spartan', sans-serif;
+  font-size: 75%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 0.8rem;
+  margin: 1rem 0 2.5rem 0;
+  line-height: 1.5rem;
+  color: var(--dark-gray);
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+/* ////////////////////////////////////////////////////////////// */
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 3rem 1.5rem;
+  transition: 0.3s;
+  position: absolute;
+  z-index: 2;
+}
+
+.open {
+  background: var(--white);
+  box-shadow: 0 0 5px 2px var(--very-dark-gray);
+  transition: 0.3s;
+}
+
+.logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.hamburger-btn {
+  margin-top: -0.2rem;
+  cursor: pointer;
+}
+
+.menu {
+  text-transform: lowercase;
+  list-style: none;
+  margin-left: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.menu-link {
+  cursor: pointer;
+}
+
+.menu-link:not(:last-of-type) {
+  margin-right: 1rem;
+}
+/* ////////////////////////////////////////////////////////////// */
+.slider {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+}
+
+.images-half {
+  display: grid;
+  justify-items: end;
+}
+
+.images-container {
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+  display: grid;
+  width: 100%;
+}
+
+.images-container picture {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+  object-fit: cover;
+  object-position: center;
+  transition: opacity 0.8s linear;
+  pointer-events: none;
+}
+
+.images-container img {
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+}
+
+.controls-container {
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+  align-self: end;
+}
+
+.controls {
+  background: var(--black);
+  padding: 1.3rem 1.7rem;
+  cursor: pointer;
+  margin-bottom: -0.25rem;
+}
+
+.controls:hover {
+  background: var(--very-dark-gray);
+}
+
+.controls-left {
+  margin-right: -0.2rem;
+}
+
+/* ////////////////////////////////////////////////////////////// */
+.captions-container {
+  width: 100%;
+  height: 100%;
+  padding: 4rem 3rem;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.caption {
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.shop-btn:link,
+.shop-btn:visited,
+.shop-btn:active {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.4rem;
+  color: var(--very-dark-gray);
+  position: relative;
+}
+
+.shop-btn::after {
+  content: '';
+  background: url('/images/icon-arrow.svg');
+  background-repeat: no-repeat;
+  position: absolute;
+  height: 1rem;
+  width: 2.5rem;
+  margin-left: 2rem;
+}
+
+.images-container picture.active,
+.caption.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.hidden {
+  display: none;
+}
+
+/* ////////////////////////////////////////////////////////////// */
+.bottom-half {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+}
+
+.bottom-half img {
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.about {
+  padding: 3rem;
+}
+
+.about h1 {
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 0.3rem;
+}
+/* ////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////// */
+/* Desktop */
+@media screen and (min-width: 50em) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  header {
+    padding: 5rem 1rem;
+  }
+
+  .open {
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .logo {
+    left: 10%;
+  }
+
+  .hamburger-btn {
+    display: none;
+  }
+
+  .menu {
+    margin-left: 13rem;
+    color: var(--white);
+    display: flex;
+  }
+
+  .slider {
+    grid-template-columns: 64fr 36fr;
+  }
+
+  .bottom-half {
+    display: grid;
+    grid-template-columns: 0.6fr 1fr 0.6fr;
+    width: 100%;
+  }
+
+  .controls-container {
+    margin-right: -9.75rem;
+    z-index: 2;
+  }
+
+  .controls {
+    padding: 1.5rem 2rem;
+  }
 }

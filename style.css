@@ -1,6 +1,3 @@
-/* - Mobile: 375px
-- Desktop: 1440px */
-
 :root {
   --dark-gray: rgb(161, 161, 161);
   --black: rgb(0, 0, 0);
@@ -20,7 +17,7 @@ body {
 }
 
 h1 {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
 }
 
 p {
@@ -65,7 +62,7 @@ header {
   text-transform: lowercase;
   list-style: none;
   margin-left: auto;
-  display: flex;
+  display: none;
   flex-wrap: wrap;
 }
 
@@ -94,6 +91,7 @@ header {
 .menu-link:not(:last-of-type) {
   margin-right: 1rem;
 }
+
 /* ////////////////////////////////////////////////////////////// */
 .slider {
   position: relative;
@@ -160,7 +158,7 @@ header {
 .captions-container {
   width: 100%;
   height: 100%;
-  padding: 4rem 3rem;
+  padding: 5rem 3rem 4rem 3rem;
   display: grid;
   grid-template-columns: 1fr;
 }
@@ -193,8 +191,8 @@ header {
   margin-left: 2rem;
 }
 
-.hidden {
-  display: none;
+.show {
+  display: flex;
 }
 
 /* ////////////////////////////////////////////////////////////// */
@@ -221,12 +219,13 @@ header {
   font-size: 0.8rem;
   letter-spacing: 0.3rem;
 }
+
 /* ////////////////////////////////////////////////////////////// */
 /* ////////////////////////////////////////////////////////////// */
 /* Desktop */
 @media screen and (min-width: 50em) {
   h1 {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 
   header {

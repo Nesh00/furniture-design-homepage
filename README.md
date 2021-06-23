@@ -26,7 +26,6 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/Nesh00/furniture-design-homepage]
 - Live Site URL: [https://furniture-design-homepage.netlify.app/]
 
 ## My process
@@ -43,3 +42,4 @@ Users should be able to:
 
 - Website - [https://furniture-design-homepage.netlify.app/]
 - Twitter - [https://twitter.com/nenad37452460]
+- LinkedIn - [https://www.linkedin.com/in/nenad-tsvetanovski-3101b474/]

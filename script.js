@@ -17,15 +17,6 @@ let currentSlide = 0;
 // //Functionality
 
 // Menu
-const showMenu = function () {
-  if (window.innerWidth <= 800) {
-    menu.classList.add('hidden');
-  } else {
-    menu.classList.remove('hidden');
-  }
-};
-showMenu();
-
 const changeMenuIcon = function () {
   if (header.classList.contains('open')) {
     hamburgerBtn.src = 'images/icon-hamburger.svg';
@@ -36,8 +27,8 @@ const changeMenuIcon = function () {
 
 const openMenu = function () {
   changeMenuIcon();
-  logo.classList.toggle('hidden');
-  menu.classList.toggle('hidden');
+  logo.classList.toggle('show');
+  menu.classList.toggle('show');
   header.classList.toggle('open');
 };
 

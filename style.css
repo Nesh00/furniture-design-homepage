@@ -98,7 +98,6 @@ header {
 }
 
 .images-container picture {
-  opacity: 0;
   width: 100%;
   height: 100%;
   grid-column: 1/-1;
@@ -121,6 +120,7 @@ header {
   grid-column: 1/-1;
   grid-row: 1/-1;
   align-self: end;
+  z-index: 2;
 }
 
 .controls {
@@ -150,7 +150,6 @@ header {
 .caption {
   grid-column: 1/-1;
   grid-row: 1/-1;
-  opacity: 0;
   pointer-events: none;
 }
 
@@ -174,12 +173,6 @@ header {
   height: 1rem;
   width: 2.5rem;
   margin-left: 2rem;
-}
-
-.images-container picture.active,
-.caption.active {
-  opacity: 1;
-  pointer-events: all;
 }
 
 .hidden {
@@ -253,7 +246,6 @@ header {
 
   .controls-container {
     margin-right: -9.75rem;
-    z-index: 2;
   }
 
   .controls {
